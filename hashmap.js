@@ -10,11 +10,14 @@ class hashMap {
 
         const primeNumber = 31;
         for (let i = 0; i < key.length; i++) {
-            hashCode = primeNumber * hashCode + key.charCodeAt(i);
+            hashCode = (primeNumber * hashCode + key.charCodeAt(i)) % this.capacity;
         }
 
-        return hashCode;
-    }
+        return hashCode
+    };
+    set(key, value) {
+
+    };
 }
 
 // hacer funcion hash que tome un str y que devuelva la primer letra/un numero,
